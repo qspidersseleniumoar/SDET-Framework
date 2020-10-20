@@ -1,5 +1,7 @@
 package com.autodest.genericUtils;
 
+import java.io.File;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,6 +19,9 @@ import org.testng.annotations.Parameters;
 
 import com.autodesk.pomrepositorylib.Home;
 import com.autodesk.pomrepositorylib.Login;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.beust.jcommander.Parameter;
 
 public class BaseClass {
@@ -26,12 +31,24 @@ public class BaseClass {
 	public WebDriverUtility wlib = new WebDriverUtility();
 	public FileUtility fLib = new FileUtility();
 	public ExcelUtility eLib = new ExcelUtility();
+	static public ExtentHtmlReporter htmlReport;
+	static public ExtentReports reports;
 	
 	
 	@BeforeSuite(groups = {"smokeTest","regressionTest"})
 	public void configBS() {
 		System.out.println("connect to DB");
 		System.out.println("configure Report");
+
+		  htmlReport=new ExtentHtmlReporter(new File("./advanceReport.html"));
+		  htmlReport.config().setDocumentTitle("ExtentReport");
+		  htmlReport.config().setTheme(Theme.DARK);
+		  reports=new ExtentReports();
+			
+			  reports.attachReporter(htmlReport); 
+			  reports.setSystemInfo("Environment","Windows"); 
+			  reports.setSystemInfo("Reporter", "Nithesh");
+			 
 	}
 	
 	//@Parameters("browser")
@@ -56,7 +73,7 @@ public class BaseClass {
 	}
 	
 	
-	@BeforeClass(groups = {"smokeTest","regressionTest"})
+	//@BeforeClass(groups = {"smokeTest","regressionTest"})
 	public void configBC() throws Throwable {
 	
 		/*read common Data*/
@@ -82,7 +99,7 @@ public class BaseClass {
 	}
 	
 	
-	@BeforeMethod(groups = {"smokeTest","regressionTest"})
+	//@BeforeMethod(groups = {"smokeTest","regressionTest"})
 	public void configBM() throws Throwable {
 		String USERNAME = fLib.getPropertyKeyValue("username");
 		String PASSWORD = fLib.getPropertyKeyValue("password");
@@ -92,7 +109,7 @@ public class BaseClass {
 	}
 	
 	
-	@AfterMethod(groups = {"smokeTest","regressionTest"})
+	//@AfterMethod(groups = {"smokeTest","regressionTest"})
 	public void configAM() {
 		/*step 6: logout */
 		 Home hpage = new Home(driver);
@@ -100,7 +117,7 @@ public class BaseClass {
 
 	}
 	
-	@AfterClass(groups = {"smokeTest","regressionTest"})
+//	@AfterClass(groups = {"smokeTest","regressionTest"})
 	public void configAC() {
 
 		/*step 7: close the browser */
@@ -123,6 +140,8 @@ public class BaseClass {
 	public void configBS1() {
 		System.out.println("close  DB");
 		System.out.println(" Report backUP");
+		reports.flush();
+		htmlReport.flush();
 	}
 }
 
