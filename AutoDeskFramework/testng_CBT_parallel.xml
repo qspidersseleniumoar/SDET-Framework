@@ -6,6 +6,7 @@
 
   <test name="Test-Chrome" preserve-order="true">
     <parameter name="browser" value ="chrome"/>
+     <parameter name="os" value ="windows"/>
     <classes>
       <class name="com.autodesk.contacttest.CreateContactTest"/>
       <class name="com.autodest.organizationTest.CreateOrgTest"/>
@@ -15,6 +16,7 @@
   
    <test name="Test-Firefox" preserve-order="true">
     <parameter name="browser" value ="firefox"/>
+    <parameter name="os" value ="windows"/>
     <classes>
       <class name="com.autodesk.contacttest.CreateContactTest"/>
       <class name="com.autodest.organizationTest.CreateOrgTest"/>
