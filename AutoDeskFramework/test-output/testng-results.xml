@@ -1,39 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="6" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="64" started-at="2020-10-20T07:58:12Z" finished-at="2020-10-20T07:58:12Z">
+  <suite name="Default suite" duration-ms="12157" started-at="2020-10-21T07:42:50Z" finished-at="2020-10-21T07:43:02Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="64" started-at="2020-10-20T07:58:12Z" finished-at="2020-10-20T07:58:12Z">
-      <class name="practice.QouteTest">
-        <test-method status="PASS" signature="configBS()[pri:0, instance:practice.QouteTest@3d299e3]" name="configBS" is-config="true" duration-ms="154" started-at="2020-10-20T07:58:12Z" finished-at="2020-10-20T07:58:12Z">
+    <test name="Default test" duration-ms="12157" started-at="2020-10-21T07:42:50Z" finished-at="2020-10-21T07:43:02Z">
+      <class name="practice.SeleniumGRid">
+        <test-method status="PASS" signature="crateCoantact()[pri:0, instance:practice.SeleniumGRid@50a7bc6e]" name="crateCoantact" duration-ms="12116" started-at="2020-10-21T07:42:50Z" finished-at="2020-10-21T07:43:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configBS -->
-        <test-method status="PASS" signature="createQuote()[pri:0, instance:practice.QouteTest@3d299e3]" name="createQuote" duration-ms="19" started-at="2020-10-20T07:58:12Z" finished-at="2020-10-20T07:58:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createQuote -->
-        <test-method status="PASS" signature="configBS1()[pri:0, instance:practice.QouteTest@3d299e3]" name="configBS1" is-config="true" duration-ms="465" started-at="2020-10-20T07:58:12Z" finished-at="2020-10-20T07:58:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- configBS1 -->
-      </class> <!-- practice.QouteTest -->
-      <class name="practice.InvoiceTest">
-        <test-method status="PASS" signature="createInvoiceTest()[pri:0, instance:practice.InvoiceTest@55a561cf]" name="createInvoiceTest" duration-ms="3" started-at="2020-10-20T07:58:12Z" finished-at="2020-10-20T07:58:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createInvoiceTest -->
-        <test-method status="PASS" signature="deleteInvoice()[pri:0, instance:practice.InvoiceTest@55a561cf]" name="deleteInvoice" duration-ms="3" started-at="2020-10-20T07:58:12Z" finished-at="2020-10-20T07:58:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteInvoice -->
-        <test-method status="PASS" signature="modifyInvoice()[pri:0, instance:practice.InvoiceTest@55a561cf]" name="modifyInvoice" duration-ms="2" started-at="2020-10-20T07:58:12Z" finished-at="2020-10-20T07:58:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- modifyInvoice -->
-      </class> <!-- practice.InvoiceTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- crateCoantact -->
+      </class> <!-- practice.SeleniumGRid -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
