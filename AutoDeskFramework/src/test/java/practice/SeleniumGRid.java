@@ -13,7 +13,7 @@ public class SeleniumGRid {
 	@Test
 	public void crateCoantact() throws Throwable {
 		
-		URL url = new URL("http://192.168.1.152:4444/wd/hub");
+		URL url = new URL("http://localhost:4444/wd/hub");
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		
 		RemoteWebDriver driver = new RemoteWebDriver(url, cap);

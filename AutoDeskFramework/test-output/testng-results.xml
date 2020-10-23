@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12157" started-at="2020-10-21T07:42:50Z" finished-at="2020-10-21T07:43:02Z">
+  <suite name="Default suite" duration-ms="18379" started-at="2020-10-21T19:01:02Z" finished-at="2020-10-21T19:01:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12157" started-at="2020-10-21T07:42:50Z" finished-at="2020-10-21T07:43:02Z">
+    <test name="Default test" duration-ms="18379" started-at="2020-10-21T19:01:02Z" finished-at="2020-10-21T19:01:21Z">
       <class name="practice.SeleniumGRid">
-        <test-method status="PASS" signature="crateCoantact()[pri:0, instance:practice.SeleniumGRid@50a7bc6e]" name="crateCoantact" duration-ms="12116" started-at="2020-10-21T07:42:50Z" finished-at="2020-10-21T07:43:02Z">
+        <test-method status="PASS" signature="crateCoantact()[pri:0, instance:practice.SeleniumGRid@50a7bc6e]" name="crateCoantact" duration-ms="18323" started-at="2020-10-21T19:01:02Z" finished-at="2020-10-21T19:01:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- crateCoantact -->

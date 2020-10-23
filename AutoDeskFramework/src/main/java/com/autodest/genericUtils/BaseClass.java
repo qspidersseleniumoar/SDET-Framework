@@ -1,6 +1,7 @@
 package com.autodest.genericUtils;
 
 import java.io.File;
+import java.sql.SQLException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -48,6 +49,8 @@ public class BaseClass {
 			  reports.attachReporter(htmlReport); 
 			  reports.setSystemInfo("Environment","Windows"); 
 			  reports.setSystemInfo("Reporter", "Nithesh");
+			  
+			  DataBaseUtilities.connectToDB();
 			 
 	}
 	
@@ -137,11 +140,13 @@ public class BaseClass {
 
 
 	@AfterSuite(groups = {"smokeTest","regressionTest"})
-	public void configBS1() {
+	public void configBS1() throws SQLException {
 		System.out.println("close  DB");
 		System.out.println(" Report backUP");
 		reports.flush();
 		htmlReport.flush();
+		
+		DataBaseUtilities.closeDb();
 	}
 }
 
