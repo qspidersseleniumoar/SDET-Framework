@@ -7,6 +7,7 @@ package com.autodesk.pomrepositorylib;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,6 +17,9 @@ public class Login {   //rule -1
 		PageFactory.initElements(driver, this);
 	}
 	
+	
+	@FindBy (xpath = "//input[@id='userId' and @name='username']")
+	WebElement usernameEdt1;
 	
     @FindBy(name="user_name")                   //Rule -2 
     private WebElement usernameEdt;
@@ -27,7 +31,7 @@ public class Login {   //rule -1
     private WebElement loginButon;
 
 	public WebElement getUsernameEdt() {        //rule-3
-		return usernameEdt;
+		return usernameEdt1;
 	}
 
 	public WebElement getPasswordEdt() {
@@ -39,12 +43,12 @@ public class Login {   //rule -1
 	}
     
 	public void loginToApp(String username , String password) {             //Rule -5
-		usernameEdt.sendKeys(username);
+		usernameEdt1.sendKeys(username);
 		passwordEdt.sendKeys(password);
 		loginButon.click();
 	}
 	public void loginToApp() {             //Rule -5
-		usernameEdt.sendKeys("admin");
+		usernameEdt1.sendKeys("admin");
 		passwordEdt.sendKeys("admin");
 		loginButon.click();
 	}

@@ -3,11 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice.SeleniumGRid">
+      <class name="com.autodesk.contacttest.CreateContactTest">
         <methods>
-          <include name="crateCoantact"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="createContactTest"/>
+          <include name="configBS1"/>
+          <include name="configAC"/>
+          <include name="configBM"/>
+          <include name="configAM"/>
         </methods>
-      </class> <!-- practice.SeleniumGRid -->
+      </class> <!-- com.autodesk.contacttest.CreateContactTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

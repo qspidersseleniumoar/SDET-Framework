@@ -1,8 +1,11 @@
 package com.autodest.genericUtils;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -21,7 +24,9 @@ public class ExcelUtility {
     * @param rowNum
     * @param colNum
     * @return
-    * @throws Throwable
+ * @throws IOException 
+ * @throws EncryptedDocumentException 
+ * @throws Throwable
     */
 	public String getExcelData(String shettName , int rowNum , int colNum) throws Throwable {
 		FileInputStream fis = new FileInputStream(IConstant.excelFilePath);

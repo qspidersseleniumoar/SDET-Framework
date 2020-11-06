@@ -76,7 +76,7 @@ public class BaseClass {
 	}
 	
 	
-	//@BeforeClass(groups = {"smokeTest","regressionTest"})
+	@BeforeClass(groups = {"smokeTest","regressionTest"})
 	public void configBC() throws Throwable {
 	
 		/*read common Data*/
@@ -102,7 +102,7 @@ public class BaseClass {
 	}
 	
 	
-	//@BeforeMethod(groups = {"smokeTest","regressionTest"})
+	@BeforeMethod(groups = {"smokeTest","regressionTest"})
 	public void configBM() throws Throwable {
 		String USERNAME = fLib.getPropertyKeyValue("username");
 		String PASSWORD = fLib.getPropertyKeyValue("password");
@@ -112,7 +112,7 @@ public class BaseClass {
 	}
 	
 	
-	//@AfterMethod(groups = {"smokeTest","regressionTest"})
+	@AfterMethod(groups = {"smokeTest","regressionTest"})
 	public void configAM() {
 		/*step 6: logout */
 		 Home hpage = new Home(driver);
@@ -120,7 +120,7 @@ public class BaseClass {
 
 	}
 	
-//	@AfterClass(groups = {"smokeTest","regressionTest"})
+	@AfterClass(groups = {"smokeTest","regressionTest"})
 	public void configAC() {
 
 		/*step 7: close the browser */

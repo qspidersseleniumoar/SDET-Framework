@@ -29,7 +29,7 @@ public class CreateContactTest extends BaseClass{
 	@Test(groups = "smokeTest")
 	public void createContactTest() throws Throwable {
 		/* read the test data */
-		String lastName = eLib.getExcelData("Contact", "tc_02", "lastName")+javaUtil.getRanDomData();   //TestYAntra-989
+		String lastName = eLib.getExcelData("Contact", "tc_02", "lastname")+javaUtil.getRanDomData();   //TestYAntra-989
 	
        		 
      	/*step 3 : navigate to Contact module*/
@@ -54,7 +54,7 @@ public class CreateContactTest extends BaseClass{
 	}
 	
 
-	@Test(groups = "regressionTest")
+//	@Test(groups = "regressionTest")
 	public void createContactWithOrg() throws Throwable {
 
 

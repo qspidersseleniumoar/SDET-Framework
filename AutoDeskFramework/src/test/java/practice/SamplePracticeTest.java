@@ -3,6 +3,8 @@ package practice;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Iterator;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Row;
@@ -14,47 +16,30 @@ import com.autodest.genericUtils.ExcelUtility;
 import com.autodest.genericUtils.IConstant;
 
 public class SamplePracticeTest {
-
-	public static void main(String[] args) throws EncryptedDocumentException, IOException {
-		String sheetName = "Sheet1";
-		String expTestID = "tc_29";
-		String expColHEader = "TestName";
-		
-		int expTestRow = 0;
-		int expHeader = 0;
-		FileInputStream fis = new FileInputStream(IConstant.excelFilePath);
-		Workbook wb = WorkbookFactory.create(fis);
-		Sheet sh = wb.getSheet(sheetName);
-		int rowCount = sh.getLastRowNum();
-	    
-    for(int i=0; i<rowCount ; i++) {		
-		Row row = sh.getRow(i);
-		String zeroColData= row.getCell(0).getStringCellValue();
-        if(expTestID.contentEquals(zeroColData)) {
-        	//System.out.println("test is availbale");
-        	expTestRow = i;
-        	break;
-        }
-    }
-
+	
+  public static void main(String[] args) {
+     String var = "welcome to india welcome india";
+     String[] arr = var.split(" ");
+     
+     HashSet<String> set = new HashSet<String>();
+     for(int s=0 ;s <arr.length ; s++) {
+    	 set.add(arr[s]);
+     }
+     for(String str : set) {
+    	 System.out.println(str+"===>"+getWordCout(str, var));
+     }
     
-    int expColHeader = expTestRow-1;
-    
-        int colCount = sh.getRow(expColHeader).getLastCellNum();
-         for(int j=0 ; j <colCount ; j++) {
-        	   String actColHeader = sh.getRow(expColHeader).getCell(j).getStringCellValue();
-        	   if(actColHeader.equals(expColHEader)) {
-        		        //System.out.println("header is avibale ");
-        		        expHeader = j;
-        		        break;
-        	   }
-         }
-         
-
-      
-      String data = sh.getRow(expTestRow).getCell(expHeader).getStringCellValue();
-      System.out.println(data);
-    
-	}
+}
+  
+  public static int getWordCout(String word ,String completeWord) {
+	  int count = 0;
+	  String[] arr1 = completeWord.split(" ");
+	    for(int j=0 ; j<arr1.length ; j++) {
+	    	if(word.equals(arr1[j])) {
+	    		count++;
+	    	}
+	    }
+	return count;
+  }
 
 }
